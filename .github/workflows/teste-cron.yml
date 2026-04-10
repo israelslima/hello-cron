@@ -1,8 +1,7 @@
 name: Teste Cron Job
 
 on:
-  schedule:
-    - cron: '28 16 * * 5'
+  workflow_dispatch:
 
 jobs:
   build:
