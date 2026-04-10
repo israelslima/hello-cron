@@ -1,0 +1,19 @@
+name: Teste Cron Job
+
+on:
+  schedule:
+    - cron: '22 13 * * 5'
+  # Permite rodar manualmente para testar
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Rodar teste
+        run: |
+          echo "Executando teste periódico: $(date)"
+          # Adicione seus comandos de teste aqui
