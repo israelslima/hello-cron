@@ -2,9 +2,7 @@ name: Teste Cron Job
 
 on:
   schedule:
-    - cron: '22 13 * * 5'
-  # Permite rodar manualmente para testar
-  workflow_dispatch:
+    - cron: '28 16 * * 5'
 
 jobs:
   build:
@@ -16,4 +14,3 @@ jobs:
       - name: Rodar teste
         run: |
           echo "Executando teste periódico: $(date)"
-          # Adicione seus comandos de teste aqui
